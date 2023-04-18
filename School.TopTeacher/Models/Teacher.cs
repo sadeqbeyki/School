@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace School.Create.Models
+namespace School.TopTeacher.Models
 {
     public class Teacher : BaseEntity
     {
-        public string FullName { get; set; }
-        public string Sex { get; set; }
-        public int PhoneNumber { get; set; }
+        public string Name { get; set; }
+        public string PersonnelNumber { get; set; }
+        public ICollection<TeacherSubject> TeacherSubjects { get; set; }
     }
 }

@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace School.Create.Models
+namespace School.TopTeacher.Models
 {
     public class Course : BaseEntity
     {
         public string Name { get; set; }
-        public int GradeId { get; set; }
-        public string Description { get; set;}
+        //public string Duration { get; set; }
+        //public string Description { get; set; }
+
+        public ICollection<CourseSubject> CourseSubjects { get; set; }
     }
 }

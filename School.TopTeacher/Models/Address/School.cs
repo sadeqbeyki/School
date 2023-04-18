@@ -1,4 +1,4 @@
-﻿namespace School.Create.Models.Address
+﻿namespace School.TopTeacher.Models.Address
 {
     public class School : BaseEntity
     {

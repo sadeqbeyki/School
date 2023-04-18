@@ -1,4 +1,6 @@
-﻿namespace School.Create.Models.Address
+﻿using School.TopTeacher.Models;
+
+namespace School.TopTeacher.Models.Address
 {
     public class County : BaseEntity
     {
