@@ -2,10 +2,10 @@
 {
     public class Subject : BaseEntity
     {
-        public string Name { get; set; }
+        public string Name { get; set; }=string.Empty;
 
-        public ICollection<Grade> Grades { get; set; }
-        public ICollection<TeacherSubject> Teachers { get; set; }
-        public ICollection<CourseSubject> CourseSubjects { get; set; }
+        public List<Grade> Grades { get; set; }=new List<Grade>();
+        public List<TeacherSubject> TeacherSubjects { get; set; }=new List<TeacherSubject>();
+        public List<CourseSubject> CourseSubjects { get; set; }=new List<CourseSubject> { };
     }
 }

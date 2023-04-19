@@ -1,7 +1,8 @@
 ﻿namespace School.TopTeacher.Models
 {
-    public class Grade : BaseEntity
+    public class Grade
     {
+        public int Id { get; set; }
         public float Value { get; set; }
 
         public int StudentId { get; set; }
