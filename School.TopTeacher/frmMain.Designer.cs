@@ -51,10 +51,10 @@
             mnuAddSubject = new ToolStripMenuItem();
             toolStripSeparator3 = new ToolStripSeparator();
             mnuAddCourse = new ToolStripMenuItem();
-            helpToolStripMenuItem = new ToolStripMenuItem();
-            aboutToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             mnuFindTop = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
             gbCourceSubject.SuspendLayout();
             gbTeacherSubject.SuspendLayout();
             mainMenu.SuspendLayout();
@@ -189,27 +189,28 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(37, 20);
-            fileToolStripMenuItem.Text = "&File";
+            fileToolStripMenuItem.Size = new Size(40, 20);
+            fileToolStripMenuItem.Text = "&فایل";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             exitToolStripMenuItem.Size = new Size(180, 22);
-            exitToolStripMenuItem.Text = "E&xit";
+            exitToolStripMenuItem.Text = "خروج";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // toolsToolStripMenuItem
             // 
             toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { افزودندانشآموزToolStripMenuItem, افزودنآموزگارToolStripMenuItem, mnuAddSubject, toolStripSeparator3, mnuAddCourse, toolStripSeparator1, mnuFindTop });
             toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            toolsToolStripMenuItem.Size = new Size(46, 20);
-            toolsToolStripMenuItem.Text = "&Tools";
+            toolsToolStripMenuItem.Size = new Size(77, 20);
+            toolsToolStripMenuItem.Text = "&امور آموزش";
             // 
             // افزودندانشآموزToolStripMenuItem
             // 
             افزودندانشآموزToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnuAddGrade, mnuAddStudent });
             افزودندانشآموزToolStripMenuItem.Name = "افزودندانشآموزToolStripMenuItem";
-            افزودندانشآموزToolStripMenuItem.Size = new Size(180, 22);
+            افزودندانشآموزToolStripMenuItem.Size = new Size(172, 22);
             افزودندانشآموزToolStripMenuItem.Text = "امور دانش آموزان";
             // 
             // mnuAddGrade
@@ -229,53 +230,53 @@
             // افزودنآموزگارToolStripMenuItem
             // 
             افزودنآموزگارToolStripMenuItem.Name = "افزودنآموزگارToolStripMenuItem";
-            افزودنآموزگارToolStripMenuItem.Size = new Size(180, 22);
+            افزودنآموزگارToolStripMenuItem.Size = new Size(172, 22);
             افزودنآموزگارToolStripMenuItem.Text = "افزودن آموزگار";
             افزودنآموزگارToolStripMenuItem.Click += mnuAddTeacher_Click;
             // 
             // mnuAddSubject
             // 
             mnuAddSubject.Name = "mnuAddSubject";
-            mnuAddSubject.Size = new Size(180, 22);
+            mnuAddSubject.Size = new Size(172, 22);
             mnuAddSubject.Text = "افزودن درس";
             mnuAddSubject.Click += mnuAddSubject_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(177, 6);
+            toolStripSeparator3.Size = new Size(169, 6);
             // 
             // mnuAddCourse
             // 
             mnuAddCourse.Name = "mnuAddCourse";
-            mnuAddCourse.Size = new Size(180, 22);
+            mnuAddCourse.Size = new Size(172, 22);
             mnuAddCourse.Text = "افزودن دوره آموزشی";
             mnuAddCourse.Click += mnuAddCourse_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(169, 6);
+            // 
+            // mnuFindTop
+            // 
+            mnuFindTop.Name = "mnuFindTop";
+            mnuFindTop.Size = new Size(172, 22);
+            mnuFindTop.Text = "یافتن معلم نمونه";
+            mnuFindTop.Click += mnuFindTop_Click;
             // 
             // helpToolStripMenuItem
             // 
             helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new Size(44, 20);
-            helpToolStripMenuItem.Text = "&Help";
+            helpToolStripMenuItem.Size = new Size(48, 20);
+            helpToolStripMenuItem.Text = "&راهنما";
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(116, 22);
-            aboutToolStripMenuItem.Text = "&About...";
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
-            // 
-            // mnuFindTop
-            // 
-            mnuFindTop.Name = "mnuFindTop";
-            mnuFindTop.Size = new Size(180, 22);
-            mnuFindTop.Text = "یافتن معلم نمونه";
-            mnuFindTop.Click += mnuFindTop_Click;
+            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Text = "درباره ما...";
             // 
             // frmMain
             // 

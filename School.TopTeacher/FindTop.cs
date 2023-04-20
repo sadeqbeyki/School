@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using School.TopTeacher.Models;
 using School.TopTeacher.Persistance;
 using System;
 using System.Collections.Generic;
@@ -17,19 +18,28 @@ namespace School.TopTeacher
         public FindTop()
         {
             InitializeComponent();
+
         }
 
         private void btnFindSG_Click(object sender, EventArgs e)
         {
             SchoolDbContext db = new SchoolDbContext();
 
-
-            // دروسی را که دانش‌آموزان آن را گرفته‌اند را با همراهی نمرات آن‌ها برمی‌گرداند.
             var grades = db.Grades
                 .Where(g => g.Subject.CourseSubjects.Any(cs => cs.Course.Year == float.Parse(tbYear.Text)))
                 .Include(g => g.Subject)
                 .Include(g => g.Student)
                 .ToList();
+
+            //var result = db.Grades
+            //    .GroupBy(g => new { g.Teacher.FullName, g.Subject.Name })
+            //    .Select(g => new
+            //    {
+            //        Teacher = g.Key.Name,
+            //        Subject = g.Key.Name,
+            //        BestGrade = g.OrderByDescending(g => g.Value).FirstOrDefault().Value
+            //    })
+            //    .ToList();
 
 
 
@@ -43,6 +53,7 @@ namespace School.TopTeacher
                 }).ToList();
             //.Where(g => g.Teacher != null && g.BestGrade != null)
             //.ToList();
+            dgTopTeachers.AutoGenerateColumns = true;
 
             dgTopTeachers.DataSource = top;
 

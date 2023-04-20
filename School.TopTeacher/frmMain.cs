@@ -28,7 +28,7 @@ namespace School.TopTeacher
 
             var teachers = db.Teachers.ToList();
             cbTeacherTS.DataSource = teachers;
-            cbTeacherTS.DisplayMember = "Name";
+            cbTeacherTS.DisplayMember = "FullName";
             cbTeacherTS.ValueMember = "Id";
 
 
@@ -117,6 +117,12 @@ namespace School.TopTeacher
         {
             FindTop findTop = new FindTop();
             findTop.ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMain frmMain = new frmMain();
+            frmMain.Close();
         }
     }
 }

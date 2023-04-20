@@ -25,7 +25,7 @@ namespace School.TopTeacher
 
             var teacher = new Teacher
             {
-                Name = tbName.Text,
+                FullName = tbName.Text,
                 PersonnelNumber = tbPersonnelNumber.Text,
             };
 

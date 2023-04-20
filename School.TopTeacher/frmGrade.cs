@@ -41,6 +41,7 @@ public partial class frmGrade : Form
         var selectedSubject = (Subject)cbSubjectName.SelectedItem;
         var selectedStudent = (Student)cbStudentName.SelectedItem;
 
+
         var grade = new Grade
         {
             SubjectId = selectedSubject.Id,
