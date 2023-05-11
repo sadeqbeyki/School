@@ -22,17 +22,25 @@ namespace School.TopTeacher
         private void btnAdd_Click(object sender, EventArgs e)
         {
             using var db = new SchoolDbContext();
-
-            var course = new Course
+            try
             {
-                Name = tbName.Text,
-                Year = float.Parse(tbYear.Text),
-                Duration = tbDuration.Text,
-                Description = tbDescription.Text
-            };
+                var course = new Course
+                {
+                    Name = tbName.Text,
+                    Year = float.Parse(tbYear.Text),
+                    Duration = tbDuration.Text,
+                    Description = tbDescription.Text
+                };
+                db.Courses.Add(course);
+                db.SaveChanges();
+            }
+            catch 
+            {
+                
+            }
 
-            db.Courses.Add(course);
-            db.SaveChanges();
+
+
 
             MessageBox.Show("ثبت موفق دوره آموزشی.");
         }

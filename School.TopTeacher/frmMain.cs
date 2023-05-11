@@ -52,7 +52,7 @@ namespace School.TopTeacher
                 MessageBox.Show("Done!");
 
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("افزودن مورد تکرای امکانپذیر نیست");
 
@@ -123,6 +123,12 @@ namespace School.TopTeacher
         {
             frmMain frmMain = new frmMain();
             frmMain.Close();
+        }
+
+        private void ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reportForm topStudent = new reportForm();
+            topStudent.ShowDialog();
         }
     }
 }

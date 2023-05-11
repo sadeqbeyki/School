@@ -25,8 +25,9 @@ namespace School.TopTeacher.Persistance
             optionsBuilder.UseSqlServer("Server=.;" +
                 "Database=School;" +
                 "Trusted_Connection=True;" +
-                "User Id=sa;" +
-                "Password=7410");
+                "TrustServerCertificate=True;" +
+                "User ID=sa;" +
+                "Password=7410", o => o.EnableRetryOnFailure());
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

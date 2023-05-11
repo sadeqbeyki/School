@@ -1,4 +1,6 @@
-﻿namespace School.TopTeacher.Models
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace School.TopTeacher.Models
 {
     public class Grade
     {
@@ -11,8 +13,9 @@
         public int SubjectId { get; set; }
         public Subject Subject { get; set; }
 
-        //new
-        //public int TeacherId { get; set; }
+       
+     
+       //public int TeacherId { get; set; }
         //public Teacher Teacher { get; set; }
     }
 }

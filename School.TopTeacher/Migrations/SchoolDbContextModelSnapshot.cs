@@ -82,9 +82,6 @@ namespace School.TopTeacher.Migrations
                     b.Property<int>("SubjectId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TeacherId")
-                        .HasColumnType("int");
-
                     b.Property<float>("Value")
                         .HasColumnType("real");
 
@@ -93,8 +90,6 @@ namespace School.TopTeacher.Migrations
                     b.HasIndex("StudentId");
 
                     b.HasIndex("SubjectId");
-
-                    b.HasIndex("TeacherId");
 
                     b.ToTable("Grades", (string)null);
                 });
@@ -215,17 +210,9 @@ namespace School.TopTeacher.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("School.TopTeacher.Models.Teacher", "Teacher")
-                        .WithMany("Grades")
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Student");
 
                     b.Navigation("Subject");
-
-                    b.Navigation("Teacher");
                 });
 
             modelBuilder.Entity("School.TopTeacher.Models.TeacherSubject", b =>
@@ -268,8 +255,6 @@ namespace School.TopTeacher.Migrations
 
             modelBuilder.Entity("School.TopTeacher.Models.Teacher", b =>
                 {
-                    b.Navigation("Grades");
-
                     b.Navigation("TeacherSubjects");
                 });
 #pragma warning restore 612, 618
